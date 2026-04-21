@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller
 {
     public function index()
-    {
-        $services = Service::latest()->get();
+{
+    $services = Service::latest()->take(6)->get();
 
-        return view('admin.services.index', compact('services'));
-    }
+    return view('admin.services.index', compact('services'));
+}
 
     public function create()
     {

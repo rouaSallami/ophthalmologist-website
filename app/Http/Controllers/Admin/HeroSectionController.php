@@ -6,14 +6,18 @@ use App\Http\Controllers\Controller;
 use App\Models\HeroSection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Service;
+
 
 class HeroSectionController extends Controller
 {
     public function index()
-    {
-        $hero = HeroSection::where('is_active', true)->first();
-        return view('front.home', compact('hero'));
-    }
+{
+    $hero = HeroSection::where('is_active', true)->first();
+    $services = Service::latest()->take(6)->get();
+
+    return view('front.home', compact('hero', 'services'));
+}
 
     public function edit()
     {
