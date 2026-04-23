@@ -32,14 +32,14 @@
 
             <div
                 x-data="{ 
-                    openSections: {{ request()->routeIs('admin.hero.*', 'admin.footer.*', 'admin.why-choose-us.*') ? 'true' : 'false' }} 
+                    openSections: {{ request()->routeIs('admin.hero.*', 'admin.about.*', 'admin.why-choose-us.*', 'admin.testimonials.*', 'admin.footer.*') ? 'true' : 'false' }} 
                 }"
                 class="relative"
             >
                 <button
                     type="button"
                     @click="openSections = !openSections"
-                    class="sidebar-link w-full flex items-center justify-between {{ request()->routeIs('admin.hero.*', 'admin.footer.*', 'admin.why-choose-us.*') ? 'active' : '' }}"
+                    class="sidebar-link w-full flex items-center justify-between {{ request()->routeIs('admin.hero.*', 'admin.about.*', 'admin.why-choose-us.*', 'admin.testimonials.*', 'admin.footer.*') ? 'active' : '' }}"
                 >
                     <span>Website Sections</span>
                     <svg 
@@ -62,9 +62,19 @@
                         Hero Section
                     </a>
 
+                    <a href="{{ route('admin.about.edit') }}"
+                       class="sidebar-sublink block px-4 py-2 text-sm rounded-lg transition {{ request()->routeIs('admin.about.*') ? 'bg-white/20 text-white' : 'text-white/70 hover:bg-white/10' }}">
+                        About Section
+                    </a>
+
                     <a href="{{ route('admin.why-choose-us.edit') }}"
                        class="sidebar-sublink block px-4 py-2 text-sm rounded-lg transition {{ request()->routeIs('admin.why-choose-us.*') ? 'bg-white/20 text-white' : 'text-white/70 hover:bg-white/10' }}">
                         Why Choose Us
+                    </a>
+
+                    <a href="{{ route('admin.testimonials.index') }}"
+                       class="sidebar-sublink block px-4 py-2 text-sm rounded-lg transition {{ request()->routeIs('admin.testimonials.*') ? 'bg-white/20 text-white' : 'text-white/70 hover:bg-white/10' }}">
+                        Testimonials
                     </a>
 
                     <a href="{{ route('admin.footer.edit') }}"
@@ -79,7 +89,6 @@
                 Services
             </a>
 
-            <a href="#" class="sidebar-link text-white/70 hover:text-white transition">Testimonials</a>
             <a href="#" class="sidebar-link text-white/70 hover:text-white transition">Appointments</a>
             <a href="#" class="sidebar-link text-white/70 hover:text-white transition">Messages</a>
             <a href="#" class="sidebar-link text-white/70 hover:text-white transition">Settings</a>

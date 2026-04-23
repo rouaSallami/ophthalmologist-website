@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\HeroSectionController;
 use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\WhyChooseUsController;
+use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\AboutSectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,7 +79,25 @@ Route::patch('/services/{service}/toggle-featured', [ServiceController::class, '
 Route::post('/why-choose-us/update', [WhyChooseUsController::class, 'update'])->name('why-choose-us.update');
 
 
+
+
+Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials.index');
+Route::get('/testimonials/create', [TestimonialController::class, 'create'])->name('testimonials.create');
+Route::post('/testimonials', [TestimonialController::class, 'store'])->name('testimonials.store');
+Route::get('/testimonials/{testimonial}/edit', [TestimonialController::class, 'edit'])->name('testimonials.edit');
+Route::put('/testimonials/{testimonial}', [TestimonialController::class, 'update'])->name('testimonials.update');
+Route::delete('/testimonials/{testimonial}', [TestimonialController::class, 'destroy'])->name('testimonials.destroy');
+Route::patch('/testimonials/{testimonial}/toggle-featured', [TestimonialController::class, 'toggleFeatured'])->name('testimonials.toggleFeatured');
+
+
+
+Route::get('/about/edit', [AboutSectionController::class, 'edit'])->name('about.edit');
+Route::post('/about/update', [AboutSectionController::class, 'update'])->name('about.update');
+
+
 });
+
+
 
 
 

@@ -1,4 +1,4 @@
-<section id="home" class="relative overflow-hidden bg-white pt-4 pb-16 sm:pt-8 sm:pb-20 lg:pt-10 lg:pb-28">
+<section id="home" class="relative overflow-hidden bg-white pt-2 pb-16 sm:pt-4 sm:pb-20 lg:pt-6 lg:pb-28">
     <!-- Background effects -->
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute top-0 left-0 w-48 h-48 sm:w-72 sm:h-72 bg-accent rounded-full blur-3xl opacity-50"></div>
