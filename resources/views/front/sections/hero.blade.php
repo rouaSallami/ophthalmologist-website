@@ -32,7 +32,7 @@
 
                 <!-- Buttons -->
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="{{ $hero->button_link ?? '#appointment' }}"
+                    <a href="{{ $hero->button_link ?? route('appointment.create') }}"
                        class="inline-flex items-center justify-center rounded-2xl bg-secondary px-6 py-3.5 text-white text-sm sm:text-base font-semibold shadow-lg hover:bg-primary transition duration-300">
                         {{ $hero->button_text ?? 'Book Appointment' }}
                     </a>

@@ -1,4 +1,4 @@
-<section class="relative py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
+<section class="relative py-16 sm:py-20 lg:py-24 bg-[#F8FAFC] overflow-hidden">
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute top-0 left-0 w-56 h-56 bg-accent rounded-full blur-3xl opacity-40"></div>
         <div class="absolute bottom-0 right-0 w-64 h-64 bg-light rounded-full blur-3xl opacity-30"></div>

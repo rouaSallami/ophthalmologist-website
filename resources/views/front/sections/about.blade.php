@@ -1,4 +1,4 @@
-<section id="about" class="relative py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
+<section id="about" class="relative py-8 bg-white overflow-hidden">
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute top-0 left-0 w-56 h-56 bg-accent rounded-full blur-3xl opacity-40"></div>
         <div class="absolute bottom-0 right-0 w-64 h-64 bg-light rounded-full blur-3xl opacity-30"></div>
@@ -67,12 +67,12 @@
                     </div>
                 @endif
 
-                <div class="sm:col-span-2 pt-2">
-                    <a href="{{ $about->button_link ?? '#contact' }}"
-                       class="inline-block px-6 py-3 rounded-xl bg-secondary text-white font-medium hover:bg-primary transition">
-                        {{ $about->button_text ?? 'Book Appointment' }}
-                    </a>
-                </div>
+                <div class="sm:col-span-2 flex justify-center mt-4">
+    <a href="{{ $about->button_link ?? '#contact' }}"
+       class="px-6 py-3 rounded-xl bg-secondary text-white font-medium hover:bg-primary transition">
+        {{ $about->button_text ?? 'Book Appointment' }}
+    </a>
+</div>
             </div>
 
         </div>

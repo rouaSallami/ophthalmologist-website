@@ -6,4 +6,5 @@
     @include('front.sections.about')
     @include('front.sections.why-choose-us')
     @include('front.sections.testimonials')
+    @include('front.sections.contact')
 @endsection

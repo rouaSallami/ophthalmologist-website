@@ -81,17 +81,22 @@
                        class="sidebar-sublink block px-4 py-2 text-sm rounded-lg transition {{ request()->routeIs('admin.footer.*') ? 'bg-white/20 text-white' : 'text-white/70 hover:bg-white/10' }}">
                         Footer Section
                     </a>
-                </div>
-            </div>
 
-            <a href="{{ route('admin.services.index') }}"
+                    <a href="{{ route('admin.services.index') }}"
                class="sidebar-link {{ request()->routeIs('admin.services.*') ? 'active' : '' }}">
                 Services
             </a>
+                </div>
+            </div>
 
-            <a href="#" class="sidebar-link text-white/70 hover:text-white transition">Appointments</a>
-            <a href="#" class="sidebar-link text-white/70 hover:text-white transition">Messages</a>
-            <a href="#" class="sidebar-link text-white/70 hover:text-white transition">Settings</a>
+            
+
+            <a href="{{ route('admin.appointments.index') }}"
+               class="sidebar-link {{ request()->routeIs('admin.appointments.*') ? 'active' : '' }}">
+                Appointments
+            </a>
+            <a href="{{ route('admin.messages.index') }}" class="sidebar-link text-white/70 hover:text-white transition">Messages</a>
+           
 
         </nav>
 

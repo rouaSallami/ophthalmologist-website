@@ -1,5 +1,5 @@
 @php use Illuminate\Support\Str; @endphp
-<section id="services" class="relative py-16 sm:py-20 lg:py-24 bg-[#F8FAFC] overflow-hidden">
+<section id="services" class="relative py-8 bg-[#F8FAFC] overflow-hidden">
     <!-- Background effects -->
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute top-0 right-0 w-56 h-56 sm:w-72 sm:h-72 bg-accent rounded-full blur-3xl opacity-40"></div>
@@ -74,7 +74,7 @@
                                     Expert Care
                                 </span>
 
-                                <a href="#appointment"
+                                <a href="{{ route('appointment.create') }}"
                                    class="inline-flex items-center text-sm font-semibold text-secondary hover:text-primary transition">
                                     Book Now
                                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -89,7 +89,7 @@
 
             <!-- CTA -->
             <div class="mt-12 text-center">
-                <a href="#appointment"
+                <a href="{{ route('appointment.create') }}"
                    class="inline-flex items-center justify-center rounded-2xl bg-secondary px-6 py-3.5 text-white text-sm sm:text-base font-semibold shadow-lg hover:bg-primary transition duration-300">
                     Book Your Consultation
                 </a>
